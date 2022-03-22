@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+  }
+header{
+    background-color: rgb(95, 125, 182);
+    padding: 1em 1em 1em 1em;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+}
+legend{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.basic{
+    background-color: rgb(191, 217, 247);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1em 1em 1em 1em;
+    word-spacing: 2px;
+}
+.department{
+    background-color: rgb(191, 217, 247);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1em 1em 1em 1em;
+    word-spacing: 2px;
+}
