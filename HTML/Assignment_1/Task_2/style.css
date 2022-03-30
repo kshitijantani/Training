@@ -36,11 +36,11 @@ h4 {
     font-size: 18px;
     padding-block-start: 20px;
 }
-#one-line{
+.one-line{
     margin: auto;
     max-width: 900px;
 }
-#max-line{
+.max-line{
     margin: auto;
     max-width: 600px;
 }
@@ -49,8 +49,12 @@ h5{
     font-size: 16px;
     color: rgb(48, 186, 231);
 }
-.nav-font, h6{
+h6{
     font-weight: lighter;
+    font-size: 16px;
+    padding: 6% 0%;
+}
+.nav-font{
     font-size: 16px;
     padding: 6% 0%;
 }
@@ -116,7 +120,10 @@ img{
 }
 .nav-bar li a:hover {
     background-color: rgb(99, 58, 121);
-  }
+}
+.menulist{
+    display: none;
+}
 .horizontal-line {
     height: 4px; 
     width: 80px;
@@ -135,6 +142,13 @@ img{
     font-family:'Titillium Web', sans-serif;
     font-weight: normal;
     font-size: 18px;
+}
+.work-button:hover{
+    background-color:rgb(179, 82, 38) ;
+}
+.work-button:active {
+    background-color: rgb(179, 82, 38);
+    transform: translateY(4px);
 }
 .element-column
 {   width: 25%;
@@ -204,17 +218,31 @@ img{
 }
 .form-r
 {
+    width: 70%;
     margin: 10px;
+    float: center;
     outline: none;
+}
+.form-name{
+    display: inline-flex;
 }
 .sub-button{
     color: rgb(247, 243, 234);
+    background-color: rgb(47, 185, 231);
     border: none;
     border-radius: 3px;
-    background-color: rgb(47, 185, 231);
+    box-shadow: 0 3px rgb(66, 160, 248);
     padding: 15px 60px;
     margin: 30px 20px 50px 20px;
 }
+.sub-button:hover{
+    background-color:rgb(66, 160, 248) ;
+}
+.sub-button:active {
+    background-color: rgb(66, 160, 248);
+    transform: translateY(4px);
+}
+
 .inq-form{
     padding-top: 3%;
     margin: 0%;
@@ -223,3 +251,69 @@ img{
     color: rgb(247, 243, 234);
     opacity: 1;
   }
+
+@media screen and (max-width: 950px) {
+    .menulist{
+        display: block;
+        padding: 15px;
+    }
+    .nav-bar ul li
+    {
+       display: none;
+    }
+    .logo{
+        padding: 8px;
+    }
+    h1{
+        font-size: large;
+        max-width: 250px;
+    }
+    h2{
+        font-size: large;
+    }
+    h3{
+        font-size: medium;
+    }
+    h4{
+        font-size: x-small;
+    }
+    h5{
+        font-size: xx-small;
+    }
+    .sec-blue, .sec-gray, .sec-green, .sec-purple{
+        overflow-x: hidden; 
+        overflow-y: scroll;
+    }
+    .work-button{
+        padding: 8px 30px;
+        font-size: 10px;
+    }
+    .one-line, .max-line{
+        max-width: 200px;
+    }
+    .element-column
+    {
+        width: 100%;
+        float: center;
+    }
+    .name-column{
+        width: 100%;
+        float: center;
+    }
+    .social-icon ul
+    {
+        display: inline-flex;
+    }
+    .form-s{
+        display: list-item;
+        height: auto;
+        width: auto;
+    }
+    .form-r{
+        width: auto;
+    }
+    .sub-button{
+        padding: 8px 30px;
+        font-size: 10px;
+    }
+}
