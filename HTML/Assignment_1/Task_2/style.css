@@ -17,7 +17,7 @@ h1 {
     font-size: 42px;
     width: 100%;
     max-width: 70%;
-    padding: 8% 0% 5%;
+    padding: 20% 0% 5%;
     margin: auto;
 }
 h2{
@@ -94,7 +94,10 @@ h6{
 .nav-bar{
     display: flex;
     justify-content: space-between;
-    padding: 3%;
+    width: 100%;
+    padding: 20px 30px;
+    position: fixed;
+    background-color: rgb(134, 79, 156) ;
 }
 img{
     float: left;
@@ -105,7 +108,7 @@ img{
     padding: 5px;
 }
 .nav-bar ul li{
-    display: inline-block;
+    display: inline;
 }
 .nav-bar li a {
     text-decoration: none;
@@ -115,10 +118,7 @@ img{
     text-decoration: none;
     border-radius: 3px;
   }
-.nav-bar li a.active{
-    background-color: rgb(99, 58, 121);
-}
-.nav-bar li a:hover {
+.nav-bar li a:hover{
     background-color: rgb(99, 58, 121);
 }
 .menulist{
@@ -143,11 +143,10 @@ img{
     font-weight: normal;
     font-size: 18px;
 }
-.work-button:hover{
+.work-button:hover, .work-button:active{
     background-color:rgb(179, 82, 38) ;
 }
 .work-button:active {
-    background-color: rgb(179, 82, 38);
     transform: translateY(4px);
 }
 .element-column
@@ -157,7 +156,7 @@ img{
     padding: 20px;
     margin-bottom: 5%;
 }
-.sec-green .elements{
+.elements{
     padding: 40px 120px 10px;
 }
 .name-circle{
@@ -183,6 +182,7 @@ img{
 .social-icon ul{
     padding: 10%;
     margin: 0%;
+    float: center;
 }
 .social-icon  li{
     padding: 15px;
@@ -242,7 +242,6 @@ img{
     background-color: rgb(66, 160, 248);
     transform: translateY(4px);
 }
-
 .inq-form{
     padding-top: 3%;
     margin: 0%;
@@ -250,12 +249,16 @@ img{
 ::placeholder { 
     color: rgb(247, 243, 234);
     opacity: 1;
-  }
-
+}
 @media screen and (max-width: 950px) {
     .menulist{
         display: block;
         padding: 15px;
+    }
+    .nav-bar{
+        position: fixed;
+        width: 100%;
+        padding: 10px;
     }
     .nav-bar ul li
     {
@@ -299,10 +302,12 @@ img{
     .name-column{
         width: 100%;
         float: center;
+        padding: auto;
     }
     .social-icon ul
     {
         display: inline-flex;
+        float: center;
     }
     .form-s{
         display: list-item;
