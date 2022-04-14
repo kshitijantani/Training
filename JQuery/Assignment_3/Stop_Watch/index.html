@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Stop Watch</title>
+    <script src="../../plugins.js"></script>
+    <script src="./script.js"></script>
+    <style>
+        body {
+            padding: 100px 500px;
+            height: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid rgb(5, 5, 5);
+            border-collapse: collapse;
+            width: 420px;
+            height: 60px;
+            text-align: center;
+        }
+        .button-style{
+            padding: 10px
+        }
+        button {
+            display: inline;
+            margin: 50px;
+            width: 80px;
+            height: 30px;
+            margin: 20px 5px;
+        }
+
+        .para {
+            border: 1px solid rgb(14, 13, 13);
+            width: 400px;
+            height: auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .time_log {
+            background-color: rgb(223, 238, 252);
+            width: 400px;
+            height: auto;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <h1>STOP WATCH</h1>
+        <div class="time_stamp">
+            <table>
+                <tr>
+                    <th value=00>00</th>
+                    <th>00</th>
+                    <th>00</th>
+                    <th>00</th>
+                </tr>
+                <tr>
+                    <td>hour</th>
+                    <td>mins</th>
+                    <td>sec</th>
+                    <td>c-sec</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="button-style">
+            <button class="start">START</button>
+            <button class="restart">RESTART</button>
+            <button class="resume">RESUME</button>
+            <button class="pause">PAUSE</button>
+            <button class="stop">STOP</button>
+            <button class="reset">RESET</button>
+        </div>
+
+
+        <div class="statement">
+            <p class="para">Enter time and hit run!</p>
+        </div>
+
+        <div class="time_log">
+            <p> Log Activity:</p>
+            <p id="time_sheet"></p>
+        </div>
+    </div>
+</body>
+
+</html>

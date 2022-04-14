@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Count Down</title>
+    <script src="../../plugins.js"></script>
+    <script src="./script.js"></script>
+    <style>
+        button {
+            border: 1px solid rgb(10, 10, 10);
+            width: 70px;
+            margin: 20px 10px;
+        }
+
+        .para,
+        input {
+            border: 1px solid rgb(10, 10, 10);
+            width: 400px;
+            height: 40px;
+            text-align: center;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid rgb(10, 10, 10);
+            border-collapse: collapse;
+            width: 400px;
+            height: 70px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <table>
+            <tr class="time">
+                <th id="#hh">00</th>
+                <th id="#mm">00</th>
+                <th id="#ss">00</th>
+                <th id="cc">00</th>
+            </tr>
+            <tr>
+                <td>Hours</td>
+                <td>Minutes</td>
+                <td>Seconds</td>
+                <td>C-seconds</td>
+            </tr>
+        </table>
+        <form>
+            <input type="text" id="sec_val" name="sec_val" placeholder="Enter Time in seconds..."><br>
+        </form>
+        <button id = "start">START</button>
+        <button id = "restart">RESTART</button>
+        <button id = "resume">RESUME</button>
+        <button id = "pause">PAUSE</button>
+        <button id = "stop">STOP</button>
+        <button id = "reset">RESET</button>
+
+        <div class="statement">
+            <p class="para">Enter time and hit run!</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
