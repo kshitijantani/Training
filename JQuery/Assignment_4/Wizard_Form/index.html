@@ -2,9 +2,23 @@
 
 <head>
     <title>Wizard Form</title>
-    <script src='../../plugins.js'></script>
-    <script type='text/javascript' src='./script.js'></script>
     <link rel="stylesheet" href="style.css">
+    <link type="text/css" href="../jQuery-Date-Time-Picke-Plugin-Simple-Datetimepicker/jquery.simple-dtpicker.css"
+        rel="stylesheet" />
+    <script src='../../plugins.js'></script>
+
+    <!-- Clanedar Plugin scripts -->
+    <script src="../jQuery-Date-Time-Picke-Plugin-Simple-Datetimepicker/jquery.simple-dtpicker.js"></script>
+    <!-- <script src="../jQuery-Date-Time-Picke-Plugin-Simple-Datetimepicker/t/"></script> -->
+
+    <!--Script for Mask plugin-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+        integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous">
+        </script>
+    <!--Script for Validation plugin-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js'></script>
+    <script type='text/javascript' src='./script.js'></script>
+
 
 </head>
 
@@ -14,50 +28,58 @@
         <button class='steps'>STEP 1</button>
         <button class='steps'>STEP 2</button>
         <button class='steps'>STEP 3</button>
-        <form action='#'>
-            <!--  -->
-            <div class = 'form'>
-                
-            <div class='container'>
-                <label for='fname'>First Name:</label>
-                <input type='text' id='fname' name='fname' placeholder='Enter First Name'><br>
-                <label for='lname'>Last Name:</label>
-                <input type='text' id='lname' name='lname' placeholder='Enter Last Name'><br>
-                <label for='gender'>Gender:</label>
-                <input type='radio' id='female' name='gender' value='FEMALE'>
-                <label for='female'> Female </label>
-                <input type='radio' id='male' name='gender' value='MALE'>
-                <label for='male'> Male </label><br>
+        <form class='validate_form' action='#'>
+
+            <div class='form'>
+
+                <div class='container'>
+                    <label for='fname'>First Name:</label>
+                    <input type='text' id='fname' name='fname' placeholder='Enter First Name'><br>
+                    <label for='lname'>Last Name:</label>
+                    <input type='text' id='lname' name='lname' placeholder='Enter Last Name'><br>
+                    <label for='gender'>Gender:</label>
+                    <input type='radio' id='female' name='gender' value='FEMALE'>
+                    <label for='female'> Female </label>
+                    <input type='radio' id='male' name='gender' value='MALE'>
+                    <label for='male'> Male </label><br>
+                </div>
+                <div class='container'>
+                    <label for='mail'>Email Id:</label>
+                    <input type='email' id='mail' name='mail' placeholder='Enter Email'><br>
+                    <label for='cnum'>Contact No:</label>
+                    <input type='text' id='cnum' name='cnum' placeholder='Enter Contact Number'><br>
+                    <label for='bdate'>Date of Birth:</label>
+                    <input type='text' id='bdate' name='bdate' placeholder="YY/MM/DD" autocomplete="off"><br>
+                </div>
+                <div class='container'>
+                    <label for='sport'>Favourite Sports:</label>
+                    <select id='sport' name='Sports'>
+                        <option value='Cricket'>Cricket</option>
+                        <option value='Basket ball'>BasketBall</option>
+                        <option value='Football'>FootBall</option>
+                        <option value='Tennis'>Tennis</option>
+                    </select><br>
+                    <label for='hour'>For how many hours? </label>
+                    <input type='text' id='hour' name='hour' placeholder='hh:mm'><br>
+                    <label for='zipc'>Zip Code:</label>
+                    <input type='text' id='zipc' name='zipc' placeholder='___-___'><br>
+                    <label for='ipad'>IP Address:</label>
+                    <input type='text' id='ipad' name='ipad' placeholder='___-___-___'><br>
+                    <label for='mny'>Money:</label>
+                    <input type='text' id='mny' name='mny' placeholder='Enter Amount'><br>
+                    <label for='bio'>About yourself:</label>
+                    <textarea id='bio' name='bio' placeholder='Tell us something about yourself...!' rows='1' cols='20'></textarea><br>
+                    <label for='tnc'>I agree to <span> Terms & Conditions </span></label>
+                    <input type='checkbox' id='tnc' name='tnc' value='checked'>
+                </div>
+                <div class='pages'>
+                    <button class='prev' type="button">Previous</button>
+                    <button class='next' type="button">Save & Next</button>
+                    <button class='update' type="button" onclick="alert('Your data is updated!')">Update &
+                        Submit</button>
+                    <button class='submit' type="button">Submit</button>
+                </div>
             </div>
-            <div class='container'>
-                <label for='mail'>Email Id:</label>
-                <input type='text' id='mail' name='mail' placeholder='Enter Email'><br>
-                <label for='cnum'>Contact No:</label>
-                <input type='text' id='cnum' name='cnum' placeholder='Enter Contact Number'><br>
-                <label for='bdate'>Date of Birth:</label>
-                <input type='text' id='bdate' name='bdate'><br>
-            </div>
-            <div class='container'>
-                <label for='sport'>Favourite Sports:</label>
-                <select id='sport' name='Sports'>
-                    <option value='Cricket'>Cricket</option>
-                    <option value='Basket ball'>BasketBall</option>
-                    <option value='Football'>FootBall</option>
-                    <option value='Tennis'>Tennis</option>
-                </select><br>
-                <label for='bio'>About yourself:</label>
-                <textarea id='bio' name='bio' placeholder='Tell us something about yourself...!' rows='1' cols='20'>
-                </textarea><br>
-                <label for='tnc'>I agree to <span> Terms & Conditions </span></label>
-                <input type='checkbox' id='tnc' name='tnc' value='checked'>
-            </div>
-            <div class='pages'>
-                <button class='prev' type="button">Previous</button>
-                <button class='next' type="button">Save & Next</button>
-                <button class='update' type="button" onclick="alert('Your data is updated!')">Update & Submit</button>
-                <button class='submit' type="button" >Submit</button>
-            </div>
-        </div>
 
         </form>
     </div>
@@ -72,6 +94,10 @@
                 <th>Contact No</th>
                 <th>DOB</th>
                 <th>Sports</th>
+                <th>Hours</th>
+                <th>Zip Code</th>
+                <th>IP Address</th>
+                <th>Money</th>
                 <th>About You</th>
                 <th>T & C</th>
                 <th>Edit</th>
