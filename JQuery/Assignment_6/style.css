@@ -1,0 +1,38 @@
+.calculator {
+    text-align: center;
+    padding: 20px 80px 50px;
+    width: 60%;
+    margin: auto;
+    height: 90%;
+}
+.header{
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    letter-spacing: 3px;
+    text-align: center;
+    color: rgb(128, 126, 124);
+}
+
+.container{
+    width: 100%;
+    padding: 4px;
+}
+
+#user_input{
+    width: 540px;
+    height: 40px;
+    border: 1px solid black;
+}
+button{
+    width: 70px;
+    height: 30px;
+    margin: 10px;
+}
+#equalToButton{
+    width: 165px;
+    height: 30px;
+}
+.keys{
+    font-weight: bold;
+}
