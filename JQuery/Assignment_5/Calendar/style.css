@@ -1,0 +1,100 @@
+
+.calendar {
+    background-color: rgb(247, 246, 233);
+    text-align: center;
+    padding: 20px 80px 50px;
+    width: 60%;
+    margin: auto;
+    height: 90%;
+    /* position: relative; */
+}
+.header, .tabs, .days, .dates, .footer{
+    display: inline-block;
+    width: 100%;
+}
+.header{
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    letter-spacing: 3px;
+    text-align: center;
+    color: rgb(202, 146, 25);
+    border: 1px solid rgb(192, 189, 189);
+}
+.tabs{
+    background-color: rgb(202, 146, 25);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* letter-spacing: 2px; */
+    color: cornsilk;
+    font-size: large;
+    margin: 10px 0px;
+    padding: 7px 11px; 
+}
+p.month_year {
+    display: inline-block;
+}
+.days{
+    height: 450px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 2px;
+    border-top: 1px solid rgb(176, 178, 180);
+    border-collapse: collapse ;
+}
+td{
+    text-align: center;
+    padding: 19px 11px ;
+}
+tr, th{
+    padding: 15px 42px 60px;
+    border-top: 1px solid rgb(135, 136, 138);
+    border-collapse: collapse ;
+}
+.footer{
+
+    margin: 16px 0px;
+}
+button{
+    width: 150px;
+    padding: 15px 0px;
+    margin: 0px 7px;
+    font-size: medium;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid rgb(202, 146, 25);
+}
+button:hover{
+    background-color: rgb(202, 146, 25);
+}
+i.fa.fa-caret-square-o-left {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+i.fa.fa-caret-square-o-right {
+    padding-right: 20px;
+    padding-top: 20px;
+}
+#yearList, #monthList, #dateList{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: medium;
+}
+h3{
+    display: inline-block;
+}
+select{
+    text-align: center;
+    width: 150px;
+    padding: 15px 2px;
+    margin: 0px 7px;
+    font-size: medium;
+    border-radius: 3px;
+    border: 1px solid rgb(202, 146, 25) !important;
+
+}

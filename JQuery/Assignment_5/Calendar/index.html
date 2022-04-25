@@ -1,0 +1,53 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+    </style>
+
+    <script src='../../plugins.js'></script>
+    <script src='script.js'></script>
+
+
+</head>
+
+<body>
+    <div class='calendar'>
+        <div class='header'><b>CALENDAR</b></div>
+        <div class='tabs'>
+            <i class="fa fa-caret-square-o-left" id='leftButton' style="font-size: 20px; float: left;"></i>
+            <span>
+                <h3 id='currentMonth'></h3> - <h3 id='currentYear'></h3>
+            </span>
+            <i class="fa fa-caret-square-o-right" id='rightButton' style="font-size: 20px; float: right;"
+                aria-hidden="false"></i>
+        </div>
+        <div class='days'>
+            <table>
+                <thead class='days_table'>
+                    <tr class='days_row'>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THU</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class='footer'>
+            <button id='findToday'>Today</button>
+            <select id='yearList'></select>
+            <select id='monthList'></select>
+            <select id='dateList'> <option selected >DATE</option> </select>
+            <button type="button" id='findDate'>Find Date</button>
+        </div>
+    </div>
+</body>
+
+</html>
