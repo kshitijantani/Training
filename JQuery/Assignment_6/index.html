@@ -8,6 +8,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src='../plugins.js'></script>
     <script src='script.js'></script>
+    <!-- <script src='new_script.js'></script> -->
     <style>
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -19,6 +20,7 @@
 <body>
     <div class='calculator'>
         <div class='header'><b>BASIC CALCULATOR</b></div>
+        <hr>
         <div class='input-area'>
             <input type="text" id='user_input' value = ''>
         </div>
@@ -27,25 +29,25 @@
             <button class='keys' value='7'>7</button>
             <button class='keys' value='8'>8</button>
             <button class='keys' value='9'>9</button>
-            <button class='keys' value='/'><i class="fa-solid fa-divide"></i></button>
+            <button class='keys' value='÷'>÷</button>
             <button class='keys' value='clear'><i class='fa fa-delete-left'></i></button>
             <button class='keys' value='clearAll'><i class="fa fa-paint-brush" aria-hidden="true"></i></button><br>
             <button class='keys' value='4'>4</button>
             <button class='keys' value='5'>5</button>
             <button class='keys' value='6'>6</button>
-            <button class='keys' value='*'>x</button>
-            <button class='keys' value='('>(</button>
-            <button class='keys' value=')'>)</button><br>
+            <button class='keys' value='x'>x</button>
+            <button class='keys' id = 'gray' value='('>(</button>
+            <button class='keys' id = 'gray' value=')'>)</button><br>
             <button class='keys' value='1'>1</button>
             <button class='keys' value='2'>2</button>
             <button class='keys' value='3'>3</button>
-            <button class='keys' value='-'><i class="fa-solid fa-minus"></i></button>
-            <button class='keys' value='^'>x<sup>2</sup></button>
-            <button class='keys' value='√'><i class="fa-solid fa-square-root-variable"></i></button><br>
+            <button class='keys' value='-'>-</button>
+            <button class='keys' id = 'gray' value='²'>x²</button>
+            <button class='keys' id = 'gray' value='√'>√x</button><br>
             <button class='keys' value='0'>0</button>
             <button class='keys' value='.'>.</button>
-            <button class='keys' value='%'><i class="fa-solid fa-percent"></i></button>
-            <button class='keys' value='+'><i class="fa-solid fa-plus"></i></button>
+            <button class='keys' value='%'>%</button>
+            <button class='keys' value='+'>+</button>
             <button class='keys' value='=' id = 'equalToButton'>=</button>
         </div>
     </div>

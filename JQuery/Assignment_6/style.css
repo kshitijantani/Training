@@ -1,12 +1,14 @@
 .calculator {
+    background-color: rgb(199, 231, 250);
     text-align: center;
-    padding: 20px 80px 50px;
-    width: 60%;
+    padding: 55px 80px 2px;
+    width: 35%;
     margin: auto;
-    height: 90%;
+    height: 75%;
 }
 .header{
     padding: 10px;
+    margin: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
     letter-spacing: 3px;
@@ -17,22 +19,41 @@
 .container{
     width: 100%;
     padding: 4px;
+    margin-top: 10px;
 }
 
 #user_input{
-    width: 540px;
+    width: 470px;
     height: 40px;
-    border: 1px solid black;
+    border: 1px solid rgb(150, 149, 149);
+    border-radius: 4px;
 }
 button{
     width: 70px;
-    height: 30px;
-    margin: 10px;
+    height: 40px;
+    margin: 3px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
 }
 #equalToButton{
-    width: 165px;
-    height: 30px;
+    width: 152px;
+    height: 40px;
 }
 .keys{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+#gray{
+    color: rgb(128, 128, 126);
+    border: 1px solid rgb(128, 128, 126) ;
+    border-radius: 4px;
     font-weight: bold;
+}
+hr{
+    width: 470px;
+    margin-bottom: 25px;
+}
+#user_input{
+    font-size: medium;
 }
