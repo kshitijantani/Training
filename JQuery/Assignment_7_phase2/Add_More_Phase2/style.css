@@ -1,0 +1,118 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    height: 100vh;
+}
+.container{
+    max-width: 1400px;
+}
+h1{
+    margin: 20px;
+}
+.left{
+    float: left;
+    width: 50%;
+    border-right: 1px solid rgb(134, 133, 133);
+    
+}
+.right
+{
+    width: 50%;
+    float: left;
+}
+.clearfix::after,
+.clearfix::before{
+    width: 100%;
+    display: table;
+    content: '';
+}
+.addMore{
+    width: 90px ;
+    height: 50px;
+    margin: 15px;
+    border-radius: 4px;
+    border-style: none;
+    color: white;
+    background-color: rgb(53, 163, 53);
+}
+.addRows{
+    width: 90%;
+    margin: 10px;
+}
+.parent-box{
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid black;
+}
+input{
+    width: 200px;
+    height: 30px;
+}
+.add-parent{
+    width: 90px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    color: white;
+    background-color: rgb(34, 36, 34);
+}
+.submit-parent{
+    width: 90px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    color: white;
+    background-color: rgb(53, 163, 53);
+}
+.delete-parent, .delete-details{
+    width: 90px;
+    height: 40px;
+    border-radius: 4px;
+    border-style: none;
+    color: white;
+    background-color: rgb(196, 71, 71);
+}
+.child-details{
+    padding: 10px;
+    margin: 7px;
+    border: 1px solid yellow;
+}
+.showData {
+    width: 95%;
+    margin: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.values{
+    background-color: transparent;
+    border: 1px solid black ;
+}
+tr,td{
+    table-layout: fixed;
+    width: 100px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.title{
+    font-weight: bold;
+    border: 1px solid black;
+    
+    padding: 5px;
+}
+.table td{
+    width: 50%;
+    border: 1px solid black;
+}
+table{
+    width: 100%;
+    border: 2px solid black;
+}
+.download{
+    margin: 10px;
+}
+.jsPdf{
+    border: none;
+    background-color: rgb(98, 180, 218);
+    color: white;
+}

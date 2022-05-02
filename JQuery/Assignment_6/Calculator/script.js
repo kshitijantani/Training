@@ -1,6 +1,7 @@
+var multiple, divide, square, square_root, zero;
 function calculateAns(input_value){
     try {
-        // $('#user_input').val();
+        
         zero = input_value.replace(/^0+[+/*%]/, '');
         multiple = zero.replace(/x/g, '*');
         divide = multiple.replace(/÷/g, '/');
@@ -12,9 +13,7 @@ function calculateAns(input_value){
             }
         }
 
-        // console.log(ans)
         ans = eval(square);
-        console.log(ans)
         $('#user_input').val(ans);
     }
     catch (err) {
@@ -38,8 +37,7 @@ $(document).ready(function () {
         var index_value = $('.keys').index(this);
         var button_value = $('.keys').eq(index_value).val();
         var input_value = $('#user_input').val();
-        var multiple, divide, square, square_root;
-
+        
         // take input from user
         $("#user_input").val(input_value + button_value);
 
@@ -65,8 +63,7 @@ $(document).ready(function () {
 
         // evaluate the operations given input fields by user
         else if (button_value == '=') {
-            calculateAns(input_value)
-            
+            calculateAns(input_value);
         }
 
         // displays the operations in the input field
@@ -90,9 +87,7 @@ $(document).ready(function () {
     // click event on every keypress
     $(document).keydown(function (event) {
 
-
         var input_value = $('#user_input').val();
-        var multiple, divide, square, square_root;
 
         // 
         if (event.keyCode >= 96 && event.keyCode <= 105) {
@@ -113,10 +108,10 @@ $(document).ready(function () {
             $('#user_input').val(input_value + '/')
         }
         else if(event.shiftKey == true && event.keyCode == 222){
-            $('#user_input').val(input_value + '"')
+            $('#user_input').val(input_value + '²')
         }
         else if(event.shiftKey == false && event.keyCode == 222){
-            $('#user_input').val(input_value + "'")
+            $('#user_input').val(input_value + "√")
         }
         else if (event.keyCode == 106 || (event.shiftKey == true && event.keyCode == 56)) {
             $('#user_input').val(input_value + 'x')
@@ -148,36 +143,7 @@ $(document).ready(function () {
             $("#user_input").val("");
         }
         if (event.keyCode === 13) {
-            calculateAns(input_value)
-            // try {
-            //     input_value = $('#user_input').val();
-            //     console.log(input_value);
-            //     zero = input_value.replace(/^0+/g, '');
-            //     multiple = zero.replace(/x/g, '*');
-            //     square_root = multiple.replace(/"/g, '**2 ');
-            //     square = square_root.replace(/'/g, '**0.5 ');
-
-            //     for(i=0; i < input_value.length-1; i++){
-            //         if(input_value.charAt(i) == '/' && input_value.charAt(i+1) == '/'){
-            //             throw new Error('Malformed Expression');
-            //         }
-            //     }
-            //     console.log(square);
-            //     ans = eval(square);
-            //     $("#user_input").val(ans);
-            // }
-            // catch (err) {
-            //     if (err instanceof SyntaxError) {
-            //         $('#user_input').val("Malformed expression");
-            //     } else if (err instanceof ReferenceError) {
-            //         $('#user_input').val("Enter number only");
-            //     } else if (err instanceof TypeError) {
-            //         $('#user_input').val("Malformed expression");
-            //     } else {
-            //         $('#user_input').val(err);
-            //     }
-            // }
-
+            calculateAns(input_value);
         }
     });
 });

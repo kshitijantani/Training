@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
         integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous">
         </script>
+        <!-- <script src="dist/bindings/inputmask.binding.js"></script> -->
     <!--Script for Validation plugin-->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js'></script>
     <script type='text/javascript' src='./script.js'></script>
@@ -49,7 +50,7 @@
                     <label for='cnum'>Contact No:</label>
                     <input type='text' id='cnum' name='cnum' placeholder='Enter Contact Number'><br>
                     <label for='bdate'>Date of Birth:</label>
-                    <input type='text' id='bdate' name='bdate' placeholder="YY/MM/DD" autocomplete="off"><br>
+                    <input type='text' id='bdate' name='bdate' placeholder="DD/MM/YY" autocomplete="off"><br>
                 </div>
                 <div class='container'>
                     <label for='sport'>Favourite Sports:</label>
@@ -75,7 +76,7 @@
                 <div class='pages'>
                     <button class='prev' type="button">Previous</button>
                     <button class='next' type="button">Save & Next</button>
-                    <button class='update' type="button" onclick="alert('Your data is updated!')">Update &
+                    <button class='update' type="button" >Update &
                         Submit</button>
                     <button class='submit' type="button">Submit</button>
                 </div>
@@ -108,3 +109,5 @@
 </body>
 
 </html>
+
+<!-- onclick="alert('Your data is updated!') -->

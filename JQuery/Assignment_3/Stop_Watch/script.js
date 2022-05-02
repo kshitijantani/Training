@@ -4,8 +4,7 @@ $(document).ready(function () {
     $(".resume, .restart").hide();
 
     // variable declared for time
-    var hour = 00, min = 00, sec = 00, m_sec = 00;
-    var timer, time;
+    var hour = 00, min = 00, sec = 00, m_sec = 00, timer, time;
 
     function setClockTime(a, b, c, d) {
         $('th:eq(0)').text(a);
@@ -70,6 +69,7 @@ $(document).ready(function () {
 
     //click event on STOP button
     $(".stop").click(function () {
+
 
         $(".restart").show();
         $(".resume,.start").hide();

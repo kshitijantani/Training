@@ -2,22 +2,27 @@ $(document).ready(function () {
 
     var d = new Date();
     // var bool = false;
-    var noOfDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    // var noOfDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     var months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
     var currentMonth, currentYear, currentDate, currentDay, firstDay, i, j, countDates, day, find_date, find_year, find_month, month, year;
     var highlight_date = 0;
-
+    var Days, Dates
     // default current year and month on display
     $('#currentMonth').text(months[d.getMonth()]);
     $('#currentYear').text(currentYear);
 
-    function monthFeb() {
-        if ((currentYear % 4 === 0 || currentYear % 400 === 0) && currentYear % 100 !== 0) {
-            noOfDays[1] = 29;
-        } else {
-            noOfDays[1] = 28;
-        }
-    }
+    // var totalDays = new Date(d.getFullYear(), d.getMonth(), 0);
+    //     Days = totalDays.getDay();
+    //     Dates = totalDays.getDate();
+    //     console.log(Days, Dates);
+
+    // function monthFeb() {
+    //     if ((currentYear % 4 === 0 || currentYear % 400 === 0) && currentYear % 100 !== 0) {
+    //         noOfDays[1] = 29;
+    //     } else {
+    //         noOfDays[1] = 28;
+    //     }
+    // }
 
     // function for calendar
     function addCalendar() {
@@ -31,11 +36,15 @@ $(document).ready(function () {
         var firstDate = new Date(currentYear, currentMonth, 1);
         firstDay = firstDate.getDay();
 
+        var totalDays = new Date(currentYear, currentMonth+1, 0);
+        Days = totalDays.getDay();
+        Dates = totalDays.getDate();
+
         newDate = new Date();
 
         $('#currentMonth').text(months[currentMonth]);
         $('#currentYear').text(currentYear);
-        monthFeb();
+        // monthFeb();
 
         for (i = 0; i < 6; i++) {
 
@@ -52,7 +61,7 @@ $(document).ready(function () {
                     else if (day == highlight_date ) {
                         $('.days_table').append(`<td class = 'highlight_find_date'> ${day}</td>`)
                     }
-                    else if (day - 1 == noOfDays[currentMonth]) {
+                    else if (day - 1 == Dates) {
                         $('.days_table').append(`<td></td>`);
                         return false;
                     }
@@ -80,7 +89,7 @@ $(document).ready(function () {
 
         find_month = this.value;
         $("#dateList").find("option").remove();
-        for (i = 0; i <= noOfDays[find_month]; i++) {
+        for (i = 0; i <=Dates; i++) {
             if (i == 0) {
                 $('#dateList').append(`<option disabled selected >DATE</option>`);
             }
