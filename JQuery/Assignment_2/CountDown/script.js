@@ -1,54 +1,57 @@
+var hour, sec, min, c_sec = 0
+var timer;
+function timeFunction() {
+    // get user input value 
+    var input_val = $("#sec_val").val();
+
+    // created variables for hours, minutes, seconds and centi-seconds
+    hour = parseInt(input_val / 3600);
+    min = parseInt((input_val - (hour * 3600)) / 60);
+    sec = parseInt(input_val - (min * 60) - (hour * 3600));
+    c_sec = 0;
+
+    $('.para').text("Running");
+}
+
+// function to GET values from display and input
+function getValues() {
+    hour = $('th:eq(0)').text();
+    min = $('th:eq(1)').text();
+    sec = $('th:eq(2)').text();
+    c_sec = $('th:eq(3)').text();
+}
+
+// function to SET values to display the time
+function setValues() {
+    $('th:eq(0)').text(hour);
+    $('th:eq(1)').text(min);
+    $('th:eq(2)').text(sec);
+    $('th:eq(3)').text(c_sec);
+}
+
+// main document function 
 $(document).ready(function () {
-    var hour, sec, min, c_sec = 0
-    var timer;
+
     $("#resume").hide();
     $("#restart").hide();
 
     // click event on start button
     $("#start").click(function () {
 
-        // get user input value 
-        var input_val = $("#sec_val").val();
-
-        // created variables for hours, minutes, seconds and centi-seconds
-        hour = parseInt(input_val / 3600);
-        min = parseInt((input_val - (hour * 3600)) / 60);
-        sec = parseInt(input_val - (min * 60) - (hour * 3600));
-        c_sec = 0;
-
-        $('.para').text("Running");
+        timeFunction();
         startTimer();
-
-        $('th:eq(0)').text(hour);
-        $('th:eq(1)').text(min);
-        $('th:eq(2)').text(sec);
-        $('th:eq(3)').text(c_sec);
-
+        setValues();
         $("#start").attr("disabled", true);
         $("#restart, #resume, #pause, #stop, #reset").removeAttr("disabled");
 
     });
 
+    // click event on restart button
     $("#restart").click(function () {
         $("#start").hide();
-        // get user input value 
-        var input_val = $("#sec_val").val();
-        console.log("")
-
-        // created variables for hours, minutes, seconds and centi-seconds
-        hour = parseInt(input_val / 3600);
-        min = parseInt((input_val - (hour * 3600)) / 60);
-        sec = parseInt(input_val - (min * 60) - (hour * 3600));
-        c_sec = 0;
-
-        $('.para').text("Running");
+        timeFunction();
         startTimer();
-
-        $('th:eq(0)').text(hour);
-        $('th:eq(1)').text(min);
-        $('th:eq(2)').text(sec);
-        $('th:eq(3)').text(c_sec);
-
+        setValues();
         $("#restart,#start").attr("disabled", true);
         $("#resume, #pause,  #stop, #reset").removeAttr("disabled");
 
@@ -71,10 +74,7 @@ $(document).ready(function () {
     $("#resume").click(function () {
 
         clearInterval(timer);
-        hour = $('th:eq(0)').text();
-        min = $('th:eq(1)').text();
-        sec = $('th:eq(2)').text();
-        c_Sec = $('th:eq(3)').text();
+        getValues();
         startTimer();
         $("#resume").attr("disabled", true);
         $("#start, #restart, #pause, #stop, #reset").removeAttr("disabled");
@@ -98,11 +98,8 @@ $(document).ready(function () {
     $("#reset").click(function () {
 
         clearInterval(timer);
-        var h = 0, m = 0, s = 0, c = 0;
-        $('th:eq(0)').text(h);
-        $('th:eq(1)').text(m);
-        $('th:eq(2)').text(s);
-        $('th:eq(3)').text(c);
+        hour = 0, min = 0, sec = 0, c_sec = 0;
+        setValues();
         $("#start").show();
         $("#restart, #resume").hide();
         $(".para").text("Enter time and hit run!");
@@ -142,10 +139,7 @@ $(document).ready(function () {
                 }
             }
             // set the values on screen
-            $('th:eq(0)').text(hour);
-            $('th:eq(1)').text(min);
-            $('th:eq(2)').text(sec);
-            $('th:eq(3)').text(c_sec);
+            setValues();
         }, 10);
     }
 });

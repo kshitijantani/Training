@@ -37,7 +37,6 @@ $(document).ready(function () {
         var index_value = $('.keys').index(this);
         var button_value = $('.keys').eq(index_value).val();
         var input_value = $('#user_input').val();
-        
         // take input from user
         $("#user_input").val(input_value + button_value);
 
@@ -88,8 +87,12 @@ $(document).ready(function () {
     $(document).keydown(function (event) {
 
         var input_value = $('#user_input').val();
+    
+        // console.log("ehis",$(document).find(`[data-bind-id='${event.keyCode}']`).data())
+        // var a = $(document).find(`[data-bind-id='${event.keyCode}']`).data().value
+        // $('#user_input').val(input_value + a)
 
-        // 
+        
         if (event.keyCode >= 96 && event.keyCode <= 105) {
             var button_value = String.fromCharCode(event.keyCode - 48)
             $('#user_input').val(input_value + button_value)
@@ -147,6 +150,5 @@ $(document).ready(function () {
         }
     });
 });
-
 
 

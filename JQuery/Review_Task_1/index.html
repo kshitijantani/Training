@@ -1,0 +1,142 @@
+<html>
+
+<head>
+
+    <!-- Convert HTML to PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- plugins and script file -->
+    <script type="text/javascript" src='../plugins.js'></script>
+    <script type="text/javascript" src='script.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.js"
+        integrity="sha512-ilRCxKgB7puu2PURAT+IBjOJUnnAnB2LfwM8wzP50YtwOhiqosgChQvVD21Nf5s72yQkh8ahZm8WnuGKh7FUMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Script for Validation plugin-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js'></script>
+    <script type='text/javascript' src='./script.js'></script>
+
+</head>
+
+<body>
+    <!-- main div of webpage -->
+    <div class='container'>
+        <!-- Wizard Area -->
+        <div class='wizardArea left '>
+            <!-- Button Tabs -->
+            <div class='tabs divBorder'>
+                <button class='templateTab tab'>Template</button>
+                <button class='themeTab tab'>Theme</button>
+                <button class='personalizationTab tab'>Personalization</button>
+            </div>
+
+            <!-- Tab 1 Select Template -->
+            <div class='templateDiv tab-content'>
+                <p>Select one template: </p>
+                <input type="radio" id="clean" name="templateChoice" value="CLEAN" checked>
+                <label for="clean">Clean</label><br>
+                <input type="radio" id="standard" name="templateChoice" value="STANDARD">
+                <label for="standard">Standard</label>
+            </div>
+            <!-- Tab 2 Select Theme -->
+            <div class='themeDiv tab-content'>
+                <p>Create your own theme: </p>
+                <label for='primaryColor'>Primary Color: </label>
+                <input type="color" id="primaryColor" name="primaryColor" value="#000000"><br>
+                <label for='secondaryColor'>Secondary Color: </label>
+                <input type="color" id="secondaryColor" name="secondaryColor" value="#000000"><br>
+                <label for='tertiaryColor'>Tertiary Color: </label>
+                <input type="color" id="tertiaryColor" name="tertiaryColor" value="#000000"><br><br>
+                <button class='resetButton'> Reset </button>
+            </div>
+            <!-- Tab 3 Add Details-->
+            <div class='personalizationDiv tab-content'>
+                <form class='validateForm'>
+
+                    <label for='companyName'>Company Name: </label>
+                    <input type="text" id="companyName" name="companyName" value=""
+                        placeholder="Enter Name of Company"><br>
+                    <label for="logo">Logo: </label>
+                    <input type="text" id="logo" name="logo" value=""
+                        placeholder="Enter Font Awesome 4 Logo Class (Like, fa-coffee)">
+                    <a href='https://fontawesome.com/v4/icons/'>Reference</a><br>
+                    <label for="website">Website: </label>
+                    <input type="text" id="website" name="website" value="" placeholder="Enter Website URL"><br>
+                    <label for="fullName">Full Name: </label>
+                    <input type="text" id="fullName" name="fullName" value="" placeholder="Enter Full Name"><br>
+                    <label for="designation">Designation: </label>
+                    <input type="text" id="designation" name="designation" value="" placeholder="Enter Designation"><br>
+                    <label for="contactNo">Conatct Number: </label>
+                    <input type="text" id="contactNo" name="contactNo" value="" placeholder="Enter Contact Number"><br>
+                    <label for="mail">Email Address: </label>
+                    <input type="text" id="mail" name="mail" value="" placeholder="Enter Email Address">
+
+                </form>
+            </div>
+        </div>
+        <!-- Display Area -->
+        <div class='displayArea right '>
+
+            <!-- Display Front -->
+            <p>Front: </p>
+
+            <div class='front divBorder'>
+                <!-- --------------------------------if clean template is selected--------------------------- -->
+                <div class='clean'>
+                    <div class='left-side '>
+                        <div class='front-logo'><i class='fa fa-coffee'></i></div>
+                        <h1 class='fonts primaryColor'>Company Name </h1>
+                    </div>
+                    <div class='right-side '>
+                        <h1 class='fonts'>Full Name</h1>
+                        <h3 class='fonts'></h3>
+                        <h5>Contact NUmber</h5>
+                        <h5>Mail</h5>
+                        <h5>Website</h5>
+                    </div>
+                </div>
+                <!------------------------------ if standard template is selected -------------------------->
+                <div class='standard '>
+                    <h1 class='fonts'></h1>
+                    <div class='footer'></div>
+                </div>
+
+            </div>
+
+            <!-- Display Back -->
+            <p>Back: </p>
+            <div class='back divBorder '>
+                <!----------------------------- if clean template is selected--------------------- -->
+                <div class='clean '>
+                    <h1 class='fonts'></h1>
+                </div>
+                <!-- --------------------------if standard template is selected -------------------------->
+                <div class='standard '>
+                    <div class='left-side'>
+                        <div class='front-logo'></div>
+                        <h1 class='fonts'>Company Name</h1>
+                    </div>
+                    <div class='right-side '>
+                        <h1 class='fonts'></h1>
+                        <h3 class='fonts'></h3>
+                        <h5>Contact Number</h5>
+                        <h5>Mail Address</h5>
+                        <h5>Website</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons to download and reset values -->
+            <button type='button' class='downloadButton'> Download </button>
+            <button type='button' class='resetButton'> Reset </button>
+        </div>
+    </div>
+</body>
+
+</html>

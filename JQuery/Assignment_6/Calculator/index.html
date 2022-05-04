@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src='../plugins.js'></script>
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- <script src='../plugins.js'></script> -->
     <script src='script.js'></script>
     <style>
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
@@ -38,9 +40,9 @@
             <button class='keys' value='*'>x</button>
             <button class='keys' id='gray' value='('>(</button>
             <button class='keys' id='gray' value=')'>)</button><br>
-            <button class='keys' value='1'>1</button>
-            <button class='keys' value='2'>2</button>
-            <button class='keys' value='3'>3</button>
+            <button class='keys' value='1' data-bind-id="97" data-value=1 >1</button>
+            <button class='keys' value='2' data-bind-id="98" data-value=2>2</button>
+            <button class='keys' value='3' data-bind-id="99" data-value=3>3</button>
             <button class='keys' value='-'>-</button>
             <button class="keys" id="gray" value="²">x<sup>2<sup></button>
             <button class="keys" id="gray" value="√">&radic;x</button><br>

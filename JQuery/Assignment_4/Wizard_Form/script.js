@@ -1,3 +1,7 @@
+var z = false;
+var len = $('.container').length;
+var count, fname, lname, gender, mail, cnum, bdate, sport, about, tnc, hh, zip, mon, ipd;
+var pages, len, error;
 //---------------------Mask Plugin validation------------------
 function maskValidation() {
 
@@ -14,11 +18,16 @@ maskValidation();
 // created funtion to get values
 function getUserValues() {
 
-    count = $('#sno').val(); fname = $('#fname').val();
-    lname = $('#lname').val(); zip = $('#zipc').val();
-    mail = $('#mail').val(); cnum = $('#cnum').val();
-    mon = $('#mny').val(); hh = $('#hour').val();
-    ipd = $('#ipad').val(); about = $('#bio').val();
+    count = $('#sno').val(); 
+    fname = $('#fname').val();
+    lname = $('#lname').val(); 
+    zip = $('#zipc').val();
+    mail = $('#mail').val(); 
+    cnum = $('#cnum').val();
+    mon = $('#mny').val(); 
+    hh = $('#hour').val();
+    ipd = $('#ipad').val(); 
+    about = $('#bio').val();
     sport = $('#sport :selected').val();
     gender = $('input[type="radio"]:checked').val();
     bdate = $('input[name= bdate]').handleDtpicker('getDate');
@@ -56,9 +65,6 @@ $(document).ready(function () {
 
     //---------------------Declared variables--------------------------
     $('.container,.submit,.update,.prev,.submit').hide().eq(0).show();
-    var count, fname, lname, gender, mail, cnum, bdate, sport, about, tnc, hh, zip, mon, ipd;
-    var pages, len, error, z = false;
-
 
 
     // ------------------CALENDAR PLUGIN-----------------------------
@@ -75,6 +81,7 @@ $(document).ready(function () {
 
     // --------------------------- STEPS button -------------------------
     $('.steps').click(function () {
+
 
         pages = $(this).index();
         len = $('.container').length;
@@ -123,12 +130,15 @@ $(document).ready(function () {
 
     // ---------------------------- PREVIOUS button ----------------------
     $('.prev').click(function () {
-        $('.container').hide();
 
-        pages--;
+        console.log(pages)
         if (pages == 0) {
             $('.prev').hide();
         }
+        $('.container').hide();
+
+        pages--;
+
         $(".container").eq(pages).show();
         $('.next').show();
         $('.submit').hide();
@@ -155,6 +165,9 @@ $(document).ready(function () {
 
             error = $('input.error').first().parents('.container').index();
             pages = error;
+            if (pages == 0) {
+                $('.prev').hide();
+            }
             $('.next').show();
             $('.submit').hide();
             $('.container').not($('.container').eq(error).show()).hide();
@@ -295,7 +308,7 @@ $(document).ready(function () {
             emptyFields();
 
             $(".update").hide();
-            $(".delete").attr("disabled", false);
+            $(".delete").removeAttr("disabled", false);
             z = false;
             isUpdate()
 
