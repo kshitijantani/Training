@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h3{
+    margin: 30px;
+    padding: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: gray;
+    border: 1px solid gray;
+}
+select{
+    margin: 10px;
+    width: 200px;
+    height: 30px;
+}
+input{
+    width: 200px;
+    height: 30px;
+}
+.addButton{
+    height: 35px;
+    width: 70px;
+}
+
+.left-content, .right-content {
+    /* border: 1px solid gray; */
+    /* background-color: rgb(202, 219, 245); */
+    padding-top: 10px;
+    margin: 5px;
+    float: left;
+    width: 48%;
+}
+li{
+    margin: 10px;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+/* .parentDiv{
+    margin: 3px;
+    background-color: red;
+} */
