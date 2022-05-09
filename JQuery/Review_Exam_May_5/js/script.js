@@ -1,5 +1,6 @@
-var userValue, customIndex, childIndex;
+var userValue, customIndex, childIndex, editValue, setValue;
 $(document).ready(function () {
+    $('.updateButton').hide();
     $(document).on('click', '.addButton', function () {
         var userValue = $('#inputField').val();
 
@@ -33,7 +34,7 @@ $(document).ready(function () {
             $('.child-options').append(`<option id='${userValue}'> ${userValue} </option>`)
 
             // append children on display side
-            $('.parent').eq(customIndex - 1).parent().append(`<ul class='${userValue}'>
+            $(`.parent`).parent(':selected').siblings().append(`<ul class='${userValue}'>
                             <li class='child'>${userValue}</li>
                             <button class='edit'>edit</button>
                             <button class='remove'>Remove</button>
@@ -43,12 +44,14 @@ $(document).ready(function () {
         $('#inputField').val('')
     })
 
+    // 
     $('#child').on('change', function () {
         childIndex = $(this).val();
     })
+
     $('#parent').on('change', function () {
         $('#child').trigger('change');
-        customIndex = $(this).val();
+        customIndex = $(this).find(':selected').val();
         if (customIndex == 0 || childIndex == null){
             $('.child-options').hide();
         }else{
@@ -58,11 +61,24 @@ $(document).ready(function () {
 })
 
 
-
 // on click event on edit button 
 $(document).on('click', '.edit', function () {
-    $(this)
-})
+
+    $('.updateButton').show();
+    $('.addButton').hide();
+    editValue = $(this).siblings().eq(0).text();
+    setValue = $('#inputField').val(editValue);
+    editedValue = $(this).siblings().eq(0).text(userValue);
+});
+
+//on click event on update button
+$(document).on('click', '.updateButton', function () {
+    userValue = $('#inputField').val();
+    $('.edit').trigger('click');
+    $('.updateButton').hide();
+    $('.addButton').show();
+    $('#inputField').val('');
+});
 
 // on click event on remove button 
 $(document).on('click', '.remove', function () {

@@ -20,18 +20,18 @@ input{
     width: 200px;
     height: 30px;
 }
-.addButton{
+.addButton, .updateButton{
     height: 35px;
     width: 70px;
 }
-
+    
 .left-content, .right-content {
     /* border: 1px solid gray; */
     /* background-color: rgb(202, 219, 245); */
     padding-top: 10px;
-    margin: 5px;
+    margin: 30px;
     float: left;
-    width: 48%;
+    width: 40%;
 }
 li{
     margin: 10px;
